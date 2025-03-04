@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>創造支援ツール</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>創造支援ツール</h1>
+        <p>新しいアイデアを生み出すためのインタラクティブなプラットフォーム</p>
+    </header>
+
+    <main>
+        <section id="idea-generator">
+            <h2>アイデアジェネレーター</h2>
+            <div class="card">
+                <p>異なるカテゴリーからランダムに選ばれた要素を組み合わせて、新しいアイデアの種を提供します。</p>
+                <div class="idea-result">
+                    <div id="concept1" class="concept">概念1</div>
+                    <div class="plus">+</div>
+                    <div id="concept2" class="concept">概念2</div>
+                    <div class="plus">+</div>
+                    <div id="concept3" class="concept">概念3</div>
+                </div>
+                <button id="generate-idea">新しいアイデアを生成</button>
+            </div>
+        </section>
+
+        <section id="visual-editor">
+            <h2>ビジュアルエディター</h2>
+            <div class="card">
+                <p>あなたのアイデアを視覚化してみましょう。シンプルな描画ツールを使って表現できます。</p>
+                <div class="canvas-container">
+                    <canvas id="drawing-canvas" width="600" height="400"></canvas>
+                </div>
+                <div class="canvas-controls">
+                    <div class="color-picker">
+                        <label for="color-select">色：</label>
+                        <input type="color" id="color-select" value="#000000">
+                    </div>
+                    <div class="brush-size">
+                        <label for="brush-size">太さ：</label>
+                        <input type="range" id="brush-size" min="1" max="50" value="5">
+                    </div>
+                    <button id="clear-canvas">クリア</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="text-editor">
+            <h2>テキストメモ</h2>
+            <div class="card">
+                <p>アイデアや思考をテキストで記録しましょう。</p>
+                <textarea id="idea-notes" placeholder="ここにアイデアをメモしてください..."></textarea>
+                <div class="text-controls">
+                    <button id="save-notes">保存</button>
+                    <button id="load-notes">読み込み</button>
+                    <button id="clear-notes">クリア</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="mood-board">
+            <h2>ムードボード</h2>
+            <div class="card">
+                <p>感情や雰囲気に基づいた創造のための視覚的インスピレーション。</p>
+                <div class="mood-selector">
+                    <button class="mood" data-mood="energetic">活発</button>
+                    <button class="mood" data-mood="calm">穏やか</button>
+                    <button class="mood" data-mood="mysterious">神秘的</button>
+                    <button class="mood" data-mood="futuristic">未来的</button>
+                    <button class="mood" data-mood="nostalgic">懐古的</button>
+                </div>
+                <div id="mood-display" class="mood-display">
+                    <p>ムードを選択すると、関連する色やパターンが表示されます</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 創造支援ツール - 新しいアイデアを育むためのプラットフォーム</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
